@@ -45,21 +45,9 @@ namespace BIMI.Web.Controllers
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 List<JobModel> job = (from f in db.Jobs
-                                      where f.isParent
-                                      select new JobModel()
-                                      {
-                                          ID = f.ID,
-                                          UserId = f.UserId,
-                                          Description = f.Description,
-                                          MoneyRange = f.MoneyRange,
-                                          isParent = f.isParent
-
-                                      }).ToList();
-
-                List<ApplicationUser> agents = (from f in db.Users where UserManager.IsInRole(f.Id, Worker) select f).Take(10).ToList();
+                                      where f.isParent select f).ToList();
 
                 lst.Jobs = job;
-                lst.agents = agents;
             }
             return View(lst);
         }
