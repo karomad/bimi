@@ -26,5 +26,17 @@ namespace BIMI.Web.Controllers
             //test
             return View();
         }
+
+        public ActionResult GetJobPage()
+        {
+            return View();
+        }
+
+        public ActionResult GetJobList(int type)
+        {
+
+            return View();
+        }
+
     }
 }
