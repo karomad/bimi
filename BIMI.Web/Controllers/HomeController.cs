@@ -96,8 +96,17 @@ namespace BIMI.Web.Controllers
         [HttpPost]
         public ActionResult Service(ChooseserviceModel obj)
         {
+            string id = User.Identity.GetUserId();
+            bool t = UserManager.FindById(id).IsParent;
             int a = (int)obj.ServiceType;
-            
+            JobModel ob = new JobModel();
+            ob.UserId = id;
+            ob.Description = obj.Description;
+            ob.MoneyRange = obj.MoneyRange;
+            ob.Type = a;
+            ob.isParent = t;
+            db.Jobs.Add(ob);
+            db.SaveChanges();
             return View();
         }
     }
