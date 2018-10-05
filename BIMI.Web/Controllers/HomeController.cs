@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BIMI.Web.Enums;
 using BIMI.Web.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -16,6 +17,8 @@ namespace BIMI.Web.Controllers
 
         public const string Parrent = "Parent";
         public const string Worker = "Worker";
+
+        ApplicationDbContext db = new ApplicationDbContext();
         public HomeController()
         {
         }
@@ -42,13 +45,11 @@ namespace BIMI.Web.Controllers
         public ActionResult Index()
         {
             MainPageViewModel lst = new MainPageViewModel();
-            using (ApplicationDbContext db = new ApplicationDbContext())
-            {
-                List<JobModel> job = (from f in db.Jobs
-                                      where f.isParent select f).ToList();
+            List<JobModel> job = (from f in db.Jobs
+                                  where f.isParent
+                                  select f).ToList();
 
-                lst.Jobs = job;
-            }
+            lst.Jobs = job;
             return View(lst);
         }
 
@@ -77,8 +78,11 @@ namespace BIMI.Web.Controllers
 
         public ActionResult GetJobList(int type)
         {
+            List<JobModel> job = (from f in db.Jobs
+                                  where f.isParent && f.Type == type
+                                  select f).ToList();
 
-            return View();
+            return View(job);
         }
 
     }
