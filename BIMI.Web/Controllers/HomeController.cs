@@ -82,11 +82,19 @@ namespace BIMI.Web.Controllers
             List<JobModel> job = (from f in db.Jobs
                                   where f.isParent == isParent && f.Type == type
                                   select f).ToList();
+            foreach (var item in job)
+            {
+                var user = UserManager.FindById(item.UserId);
+                item.FirstName = user.FirstName;
+                item.LastName = user.LastName;
+                item.Image = user.Image;
+            }
 
             return View(job);
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult ChooseService()
         {
 
@@ -94,6 +102,7 @@ namespace BIMI.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Service(ChooseserviceModel obj)
         {
             string id = User.Identity.GetUserId();
@@ -107,7 +116,7 @@ namespace BIMI.Web.Controllers
             ob.isParent = t;
             db.Jobs.Add(ob);
             db.SaveChanges();
-            return View();
+            return View("Index");
         }
     }
 }

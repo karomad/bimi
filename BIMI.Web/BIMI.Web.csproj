@@ -233,6 +233,18 @@
     <Compile Include="Migrations\201810052039586_asas.Designer.cs">
       <DependentUpon>201810052039586_asas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810052146001_asdasdasdasd.cs" />
+    <Compile Include="Migrations\201810052146001_asdasdasdasd.Designer.cs">
+      <DependentUpon>201810052146001_asdasdasdasd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810052158025_asdasdasdasdsssss.cs" />
+    <Compile Include="Migrations\201810052158025_asdasdasdasdsssss.Designer.cs">
+      <DependentUpon>201810052158025_asdasdasdasdsssss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810052215177_asdasdasdasdsssssssssssssssssssssss.cs" />
+    <Compile Include="Migrations\201810052215177_asdasdasdasdsssssssssssssssssssssss.Designer.cs">
+      <DependentUpon>201810052215177_asdasdasdasdsssssssssssssssssssssss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ChooseserviceModel.cs" />
@@ -596,6 +608,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files\UserImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -634,6 +647,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810052039586_asas.resx">
       <DependentUpon>201810052039586_asas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052146001_asdasdasdasd.resx">
+      <DependentUpon>201810052146001_asdasdasdasd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052158025_asdasdasdasdsssss.resx">
+      <DependentUpon>201810052158025_asdasdasdasdsssss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052215177_asdasdasdasdsssssssssssssssssssssss.resx">
+      <DependentUpon>201810052215177_asdasdasdasdsssssssssssssssssssssss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

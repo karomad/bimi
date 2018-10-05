@@ -11,29 +11,29 @@
                     <div class="our-service-content">
                         <div class="col-md-4">
                             <div data-wow-delay="0.2s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
-                                <div class="icon-wrapper"><i class="icon-our-service icon-house_sell"></i></div>
-                                <p class="name">Driver Service</p>
+                                <div class="icon-wrapper"><i class="icon-our-service icon-house_sell"><a href="@Url.Action("GetJobList",new {@type = 1 })"></a></i></div>
+                                <p class="name">Driver @(ViewBag.IsParent ? "Service" : "Job" )</p>
 
                                 <p class="text">Say goodbye to rigid processes and inflated costs. Enjoy newfound speed, flexibility, safety and cost savings.</p>
-                                <a href="@Url.Action("GetJob",new {@IsParent = ViewBag.IsParent,@type =  1})" class="btn-readmore">read more</a>
+                                <a href="@Url.Action("GetJobList",new {@IsParent = ViewBag.IsParent,@type =  1})" class="btn-readmore">read more</a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div data-wow-delay="0.45s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
-                                <div class="icon-wrapper"><i class="icon-our-service icon-rent"></i></div>
-                                <p class="name">Babysitter Service</p>
+                                <div class="icon-wrapper"><i class="icon-our-service icon-rent"><a href="@Url.Action("GetJobList",new {@type = 2 })"></a></i></div>
+                                <p class="name">Babysitter @(ViewBag.IsParent ? "Service" : "Job" )</p>
 
-                                <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-                                <a href="@Url.Action("GetJob",new {@IsParent = ViewBag.IsParent,@type =  2})" class="btn-readmore">read more</a>
+                                <p class="text">Babysitters Registry was created to give parents one place to search many of the leading caregiver services.</p>
+                                <a href="@Url.Action("GetJobList",new {@IsParent = ViewBag.IsParent,@type =  2})" class="btn-readmore">read more</a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div data-wow-delay="0.7s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
-                                <div class="icon-wrapper"><i class="icon-our-service icon-house_2"></i></div>
-                                <p class="name">Tutor service</p>
+                                <div class="icon-wrapper"><i class="icon-our-service icon-house_2"><a href="@Url.Action("GetJobList",new {@type = 3 })"></a></i></div>
+                                <p class="name">Tutor @(ViewBag.IsParent ? "Service" : "Job" )</p>
 
-                                <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-                                <a href="@Url.Action("GetJob",new {@IsParent = ViewBag.IsParent,@type =  3})" class="btn-readmore">read more</a>
+                                <p class="text">Tutors is available to families through our local neighborhood mapping technology.</p>
+                                <a href="@Url.Action("GetJobList",new {@IsParent = ViewBag.IsParent,@type =  3})" class="btn-readmore">read more</a>
                             </div>
                         </div>
                     </div>

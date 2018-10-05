@@ -1,7 +1,137 @@
 ﻿
-@{
-    ViewBag.Title = "GetJobList";
-}
+@using BIMI.Web.Models
+@model List<JobModel>
+<div id="wrapper-content">
+    <!-- PAGE WRAPPER-->
+    <div id="page-wrapper">
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <!-- CONTENT-->
+            <div class="content">
+                <div class="section page-title property-view bg-overlay">
+                    <div class="container">
+                        <div class="page-title-wrapper">
+                            <h2 class="captions">list house</h2>
+                            <ol class="breadcrumb">
+                                <li><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="active"><a href="#">properties</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-properties bg-gray padding-top padding-bottom">
+                    <div class="container">
+                        <div class="search-properties-wrapper">
+                            <div class="title-search-property">Search For Properties</div>
+                            <div class="search-properties-content">
+                                <form action="@Url.Action("GetList")" class="search-form row">
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group"><label class="title-search-form">keyword</label><input type="text" placeholder="enter your keyword" class="input-form" /></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">property type</label><select class="input-form selectbox">
+                                                <option value="all type">all type</option>
+                                                <option value="type one">type one</option>
+                                                <option value="type two">type one</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">status</label><select class="input-form selectbox">
+                                                <option value="all status">all status</option>
+                                                <option value="status one">status one</option>
+                                                <option value="status two">status two</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group"><label class="title-search-form">location</label><input type="text" placeholder="enter location" class="input-form" /></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">bedroom</label><select class="input-form selectbox">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">bathroom</label><select class="input-form selectbox">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">area (sq)</label>
 
-<h2>GetJobList</h2>
+                                            <div data-range_min="10" data-range_max="900" data-cur_min="10" data-cur_max="900" class="nstSlider">
+                                                <div class="bar"></div>
+                                                <div class="leftGrip"></div>
+                                                <div class="rightGrip"></div>
+                                            </div>
+                                            <div class="leftLabel"></div>
+                                            <div class="rightLabel"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <div class="search-form-group">
+                                            <label class="title-search-form">price (.000 $)</label>
 
+                                            <div data-range_min="10" data-range_max="990" data-cur_min="120" data-cur_max="800" class="nstSlider">
+                                                <div class="bar"></div>
+                                                <div class="leftGrip"></div>
+                                                <div class="rightGrip"></div>
+                                            </div>
+                                            <div class="leftLabel"></div>
+                                            <div class="rightLabel"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section property-view">
+                    <div class="container">
+                        <div class="property-wrapper padding-top padding-bottom">
+                            <div class="row">
+                                <div class="col-md-12 property-content">
+                                    <div class="row">
+                                        @foreach (var item in Model)
+                                        {
+                                            <div class="property-item col-md-4 col-xs-6">
+                                                <div class="sunhouse-item">
+                                                    <a href="#" class="wrapper-image"><img src="@Server.MapPath(item.Image)" alt="" class="img-responsive layout-1" /><img src="assets/images/houses/house-7.jpg" alt="" class="img-responsive layout-2" /></a>
+                                                    <div class="wrapper-content">
+                                                        <div class="about-house">
+                                                            <a href="#" class="title">@item.FirstName @item.LastName</a>
+                                                            <p class="text">@item.Description</p>
+                                                        </div>
+                                                        <div class="more-info-house grd-item">
+                                                            <div class="place-house"><i class="fa fa-map-marker"></i><a href="#">568 E 1st Ave, New Jersey</a></div>
+                                                            <div class="price">$ @item.MoneyRange</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BUTTON BACK TO TOP-->
+    <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
+</div>
