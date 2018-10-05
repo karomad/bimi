@@ -71,18 +71,19 @@ namespace BIMI.Web.Controllers
         {
             return View();
         }
-        public ActionResult GetWorkerJob()
+        public ActionResult GetJob(bool isParent)
         {
+            ViewBag.IsParent = isParent;
             return View();
         }
 
-        public ActionResult GetJobList(int type)
+        public List<JobModel> GetJobList(bool isParent)
         {
             List<JobModel> job = (from f in db.Jobs
-                                  where f.isParent && f.Type == type
+                                  where f.isParent == isParent
                                   select f).ToList();
 
-            return View(job);
+            return job;
         }
 
         [HttpGet]
