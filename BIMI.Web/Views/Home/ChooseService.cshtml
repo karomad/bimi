@@ -1,10 +1,17 @@
-﻿@using BIMI.Web.Enums 
+﻿@using BIMI.Web.Enums
+@model BIMI.Web.Models.ChooseserviceModel
 
-<form action="@Url.Action("Service", "Home")">
-@Html.DropDownList("ServiceType",
-                    new SelectList(Enum.GetValues(typeof(ServiceType))),
-                    "Select Service",
-                    new { @class = "form-control" })
+<form method="post" action="@Url.Action("Service", "Home")">
+    @Html.DropDownList("ServiceType",
+                        new SelectList(Enum.GetValues(typeof(ServiceType))),
+                        "Select Service",
+                        new { @class = "form-control" })
+    <h1></h1>
+    <h3>Write your description</h3>
+    @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    <h1></h1>
+    <h3>Write money you want to pay</h3>
+    @Html.TextBoxFor(m => m.MoneyRange, new { @class = "form-control" })
     <h1></h1>
     <input type="submit" value="Enter">
-    </form>
+</form>
