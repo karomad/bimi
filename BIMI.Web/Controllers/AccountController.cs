@@ -157,7 +157,7 @@ namespace BIMI.Web.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 var role = model.IsParent ? Parrent : Worker;
 
-                await UserManager.AddToRoleAsync(user.Id,role);
+                //await UserManager.AddToRoleAsync(user.Id,role);
 
                 if (result.Succeeded)
                 {

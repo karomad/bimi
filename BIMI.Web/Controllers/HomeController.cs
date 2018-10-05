@@ -77,13 +77,13 @@ namespace BIMI.Web.Controllers
             return View();
         }
 
-        public List<JobModel> GetJobList(bool isParent)
+        public ActionResult GetJobList(bool isParent,int type)
         {
             List<JobModel> job = (from f in db.Jobs
-                                  where f.isParent == isParent
+                                  where f.isParent == isParent && f.Type == type
                                   select f).ToList();
 
-            return job;
+            return View(job);
         }
 
         public ActionResult ChooseService()
