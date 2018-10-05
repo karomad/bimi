@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "GetJobPage";
+}
+
+<div class="vhp-schwingy-step type active" data-step="0" data-type="MEMBER">
+    <h2 class="h2">Let's get started. Choose an option.</h2>
+    <div class="row">
+        <div class="col-xs-6">
+            <fieldset>
+                <legend align="center">I need a caregiver</legend>
+                <p class="body-2">Start your free search for care in your area.</p>
+                <button type="button" class="btn btn-primary-1 btn-next-step" id="find-care" data-next-step="1" data-next-type="SEEKER" data-member-type="SEEKER" data-event-name="DesktopVHPClick" data-event-attributes="{'CTA_CLICKED':'Schwingy Find Care', 'SOURCE':'schwingy' }" rel="nofollow" data-analytics-auto-bind="true" data-analytics-attributes="{'name': 'Member Enrolled', 'data': {'screen_name': 'Homepage', 'enrollment_flow': 'schwingy', 'enrollment_step': 'member type', 'member_type': 'seeker', 'final_step': 'false'}}">
+                    <span>Find care</span>
+                </button>
+            </fieldset>
+        </div>
+        <div class="col-xs-6">
+            <fieldset>
+                <legend align="center">I want a care job</legend>
+                <p class="body-2">Create a free profile and search for jobs.</p>
+                <button type="button" class="btn btn-primary-1 btn-next-step" data-next-step="1" data-next-type="SITTER" data-member-type="SITTER" data-event-name="DesktopVHPClick" data-event-attributes="{'CTA_CLICKED':'Schwingy Find Jobs', 'SOURCE':'schwingy'}" rel="nofollow">
+                    <span>Find jobs</span>
+                </button>
+            </fieldset>
+        </div>
+    </div>
+</div>

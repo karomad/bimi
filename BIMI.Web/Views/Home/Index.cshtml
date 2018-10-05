@@ -1,53 +1,284 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@using BIMI.Web.Models
+@model MainPageViewModel
+<body>
+    <!-- WRAPPER-->
+    <div id="wrapper-content">
+        <!-- PAGE WRAPPER-->
+        <div id="page-wrapper">
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <!-- CONTENT-->
+                <div class="content">
+                    <div class="section">
+                        <div class="banner-02 bg-overlay banner-full-screen">
+                            <div class="banner-02-wrapper">
+                                <div class="container">
+                                    <div class="wrapper-title">
+                                        <h2 class="title">Trusted by families.Loved by caregivers.</h2>
+                                        <h4 class="sub-title">BE.ME. & ENjoy your life</h4>
+                                    </div>
+                                    <div class="group-button">
 
-<section class="vhp-hero" style="background-image:url(https://s.cdn-care.com/img/cms/web/visitor/childCare/img-mom-kid-background-template.jpg?v=181005)">
-    <div class="row vhp-titles">
-        <div class="col-xs-6 col-md-6">
-            <div class="icon icon-care-logo">
-                <svg id="careLogo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543.86 149.24">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #231f20
-                            }
-                        </style>
-                    </defs>
-                    <title>CareLogo</title>
-                    <path class="cls-1" d="M72.06 0C32.26.42 0 33.56 0 74.25a74.86 74.86 0 0 0 23.07 54.19 89.86 89.86 0 0 1-11.58-44.26C11.49 45.16 36.23 11 72.06 0z"></path>
-                    <path class="cls-1" d="M29.91 131.44a71.49 71.49 0 0 0 68.27 14.63 80.61 80.61 0 0 1-50.77-22c-14.21-13.63-22-31.59-22-50.57 0-31.85 26.92-64.36 58.79-71 1.1-.45 2.26-.89 3.46-1.29A72.06 72.06 0 0 0 79.79.5c-37.08 9.86-63 44.51-63 84.28a89.11 89.11 0 0 0 13.09 46.66z"></path>
-                    <path class="cls-1" d="M63.33 15.19c-20.4 13.12-32.42 34.13-32.42 57.15 0 37.81 32.38 68.51 73.74 69.91A72.35 72.35 0 0 0 131.12 126a64.27 64.27 0 0 1-26.63 5.7 64.81 64.81 0 0 1-48.6-107.85 61.32 61.32 0 0 1 7.44-8.65z"></path>
-                    <path class="cls-1" d="M45 66v.63c0 32.65 27.48 59.21 61.26 59.21a62.29 62.29 0 0 0 27.52-6.32 67.77 67.77 0 0 0 8.58-10.7 65.48 65.48 0 0 1-78.79-7.49A59.68 59.68 0 0 1 45 66z"></path>
-                    <path class="cls-1" d="M137 79.35a3.45 3.45 0 0 0-3-1.4 5.94 5.94 0 0 0-2.18.41 4.58 4.58 0 0 0-1.79 1.28 30.1 30.1 0 0 1-10 7.14 30.74 30.74 0 0 1-12.53 2.58 30.39 30.39 0 0 1-12-2.4 30.56 30.56 0 0 1-18.68-28.3 30.4 30.4 0 0 1 2.39-12 31.48 31.48 0 0 1 6.54-9.84 30.47 30.47 0 0 1 21.76-9 26.39 26.39 0 0 1 12.31 3 53.67 53.67 0 0 1 10.11 6.72 4.48 4.48 0 0 0 3.49 1.46 4.8 4.8 0 0 0 3-1 3.63 3.63 0 0 0 1.38-3 5.12 5.12 0 0 0-.57-2.29A6.9 6.9 0 0 0 136 30.9a41.38 41.38 0 0 0-12.78-8.9 38.36 38.36 0 0 0-15.7-3.25A38.89 38.89 0 0 0 92 21.91a39.73 39.73 0 0 0-12.63 8.56 40.94 40.94 0 0 0-8.47 12.68 40 40 0 0 0 0 31A39.67 39.67 0 0 0 92 95.29a38.83 38.83 0 0 0 15.5 3.13 39.65 39.65 0 0 0 16.13-3.32 38.59 38.59 0 0 0 13-9.3 4.86 4.86 0 0 0 1.37-3.58 4.81 4.81 0 0 0-1-2.87zm65.76-25.66a31.66 31.66 0 0 0-16.2-16.26A28 28 0 0 0 175 35a30.75 30.75 0 0 0-12.13 2.39 30.1 30.1 0 0 0-9.69 6.54 30.4 30.4 0 0 0-6.41 9.75 30.73 30.73 0 0 0-2.33 11.88 30.22 30.22 0 0 0 2.39 12.07 29.45 29.45 0 0 0 6.54 9.56 30.38 30.38 0 0 0 21.37 8.56 25.29 25.29 0 0 0 12.69-3.35 40 40 0 0 0 8.68-6.59v5.66a4.53 4.53 0 1 0 9.05 0V65.53a29.06 29.06 0 0 0-2.4-11.84zm-28 33.08a20.64 20.64 0 0 1-8.24-1.66 21.45 21.45 0 0 1-11.32-11.33 20.76 20.76 0 0 1-1.66-8.25 21.14 21.14 0 0 1 1.66-8.31 21.34 21.34 0 0 1 11.35-11.4 20.77 20.77 0 0 1 8.24-1.66 21.23 21.23 0 0 1 8.31 1.66 21.15 21.15 0 0 1 11.4 11.4 21.1 21.1 0 0 1 1.66 8.27 24 24 0 0 1-2 8.52 21.67 21.67 0 0 1-4.64 6.71 21.42 21.42 0 0 1-6.71 4.46 20.69 20.69 0 0 1-8.02 1.6zM247.4 36a5.08 5.08 0 0 0-3.62-1.3 27.35 27.35 0 0 0-12.36 2.84 33.29 33.29 0 0 0-8.42 5.95v-4.24a4.53 4.53 0 1 0-9.06 0v52a4.53 4.53 0 1 0 9.06 0V64.2a19.39 19.39 0 0 1 1.83-7.7 23.54 23.54 0 0 1 4.55-6.5 21.23 21.23 0 0 1 6.47-4.51 19.12 19.12 0 0 1 7.93-1.66 5.06 5.06 0 0 0 3.62-1.3 4.43 4.43 0 0 0 0-6.53zm61.97 17.5a33.16 33.16 0 0 0-6.66-9.6 31.13 31.13 0 0 0-9.61-6.53A28.39 28.39 0 0 0 281.68 35a33.17 33.17 0 0 0-12.11 2.7 31.46 31.46 0 0 0-9.67 6.53 30.78 30.78 0 0 0-6.35 33.39 29.4 29.4 0 0 0 6.54 9.56 30.37 30.37 0 0 0 21.37 8.56 34.21 34.21 0 0 0 12-2 23.72 23.72 0 0 0 9.4-6.61 4.54 4.54 0 0 0-6.41-6.43 22.23 22.23 0 0 1-6.78 4.46 21 21 0 0 1-8.19 1.6 20.67 20.67 0 0 1-7.48-1.35 21.4 21.4 0 0 1-11-9.39 20.15 20.15 0 0 1-2.34-6.22h46.76a4.82 4.82 0 0 0 3-1.14 4.11 4.11 0 0 0 1.5-3.39 28 28 0 0 0-2.55-11.77zm-7.07 7.25h-41.55a22.17 22.17 0 0 1 2.37-6 20.16 20.16 0 0 1 4.62-5.51 22.78 22.78 0 0 1 6.31-3.69 20.93 20.93 0 0 1 14.82 0 23 23 0 0 1 6.31 3.69 21.54 21.54 0 0 1 7.12 11.51zM324.81 86a5.75 5.75 0 1 0 1.68 4.06 5.56 5.56 0 0 0-1.68-4.06zm57.73-5.24a4.59 4.59 0 0 0-3.12-1.23 4.39 4.39 0 0 0-3.2 1.3 22.4 22.4 0 0 1-6.78 4.46 21 21 0 0 1-8.19 1.6 20.61 20.61 0 0 1-8.25-1.65 21.48 21.48 0 0 1-11.34-11.34 20.62 20.62 0 0 1-1.66-8.25 21.08 21.08 0 0 1 1.66-8.31 21.4 21.4 0 0 1 4.58-6.83 21.66 21.66 0 0 1 6.76-4.57 20.65 20.65 0 0 1 8.24-1.66 21 21 0 0 1 8.19 1.6 24.94 24.94 0 0 1 6.77 4.2 4.4 4.4 0 0 0 3.21 1.31 4.31 4.31 0 0 0 2.93-1.16 3.74 3.74 0 0 0 1.35-2.88c0-.84-.54-1.9-1.7-3.34a20.51 20.51 0 0 0-4.51-4 33.64 33.64 0 0 0-6.91-3.45 26 26 0 0 0-9.11-1.51 33.19 33.19 0 0 0-12.11 2.7 31.44 31.44 0 0 0-9.67 6.53 30.78 30.78 0 0 0-6.35 33.39 29.49 29.49 0 0 0 6.54 9.56 30.37 30.37 0 0 0 21.37 8.55 31 31 0 0 0 9.62-1.39 30.41 30.41 0 0 0 7.14-3.22 17 17 0 0 0 4.42-3.92 6.2 6.2 0 0 0 1.56-3.31 4.12 4.12 0 0 0-1.44-3.18zm66.09-27.07a31.72 31.72 0 0 0-16.2-16.26A28 28 0 0 0 420.88 35a33.21 33.21 0 0 0-12.11 2.7 31.41 31.41 0 0 0-9.67 6.53 30.76 30.76 0 0 0-6.35 33.39 29.35 29.35 0 0 0 6.54 9.56 30.38 30.38 0 0 0 21.37 8.56 29.94 29.94 0 0 0 21.56-8.94 31.75 31.75 0 0 0 6.47-9.6 29.66 29.66 0 0 0-.06-23.51zm-28 33.08a20.66 20.66 0 0 1-8.24-1.66 21.54 21.54 0 0 1-6.77-4.56 21.83 21.83 0 0 1-4.58-6.77 20.77 20.77 0 0 1-1.66-8.25 21.17 21.17 0 0 1 1.66-8.31 21.34 21.34 0 0 1 11.35-11.41 20.79 20.79 0 0 1 8.24-1.66 21.42 21.42 0 0 1 15.14 6.23 21.58 21.58 0 0 1 4.58 6.83 21.18 21.18 0 0 1 1.65 8.32 20.75 20.75 0 0 1-1.65 8.25 21.74 21.74 0 0 1-4.58 6.77 21.43 21.43 0 0 1-6.77 4.57 21.09 21.09 0 0 1-8.34 1.66zm110.93-39.7A20.77 20.77 0 0 0 520.5 36a20.32 20.32 0 0 0-8.14-1.66 20 20 0 0 0-9.68 2.37 22 22 0 0 0-6.68 5.53 21 21 0 0 0-6.54-5.52 20 20 0 0 0-9.67-2.37 16 16 0 0 0-7.26 1.8 24.42 24.42 0 0 0-4.39 2.85 4.34 4.34 0 0 0-1.31-3 4.53 4.53 0 0 0-7.74 3.21v52a4.53 4.53 0 1 0 9.06 0V54.76a11.84 11.84 0 0 1 3.53-8.05 11.64 11.64 0 0 1 16.29.06 12.25 12.25 0 0 1 3.65 8.45V91.3a4.53 4.53 0 1 0 9.06 0V55.22a11.49 11.49 0 0 1 .92-4.57 12.65 12.65 0 0 1 2.5-3.77 11.29 11.29 0 0 1 3.69-2.54 11.81 11.81 0 0 1 9.13 0 12 12 0 0 1 6.31 6.31 11.49 11.49 0 0 1 .92 4.57V91.3a4.53 4.53 0 1 0 9.05 0V55.22a20.48 20.48 0 0 0-1.64-8.15zm12.3-6.31a5.15 5.15 0 1 1-5.1-5 5 5 0 0 1 5.1 5zm-9 0a3.9 3.9 0 0 0 3.91 4 3.84 3.84 0 0 0 3.82-4 3.87 3.87 0 1 0-7.75 0zm3.09 2.6h-1.16v-5a13.52 13.52 0 0 1 1.93-.15 2.67 2.67 0 0 1 1.71.4 1.26 1.26 0 0 1 .52 1.07 1.3 1.3 0 0 1-1 1.19v.06a1.41 1.41 0 0 1 .89 1.22 4.56 4.56 0 0 0 .37 1.22h-1.22a3.89 3.89 0 0 1-.4-1.22.88.88 0 0 0-1-.76h-.55v2zm0-2.81h.55c.64 0 1.16-.21 1.16-.73s-.33-.82-1.06-.82a2.7 2.7 0 0 0-.64.06v1.44z"></path>
-                </svg>
+                                        <a href="@Url.Action("GetParentJob")" class="btn btn-blue">Find care</a>
+                                        <a href="@Url.Action("GetWorkertJob")" class="btn btn-blue">Find jobs</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="newest-properties padding-top padding-bottom">
+                                <div class="container">
+                                    <div class="newest-properties-wrapper">
+                                        <div class="sunhouse-title">
+                                            <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--    i.icon-church--></div>
+                                            <h2 class="main-title">Newest Properties</h2>
+
+                                            <p class="sub-title">Haven't you heard about the recession: Topten reasons why you should properties</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="newest-properties-content">
+                                                @foreach (var item in Model.Jobs)
+                                                {
+                                                    <div class="col-md-4 col-xs-6">
+                                                        <div class="sunhouse-item">
+                                                            <a href="property-detail.html" class="wrapper-image"><img src="assets/images/houses/house-1.jpg" alt="" class="img-responsive layout-1" /><img src="assets/images/houses/house-9.jpg" alt="" class="img-responsive layout-2" /></a>
+
+                                                            <div class="wrapper-content">
+                                                                <div class="about-house">
+                                                                    <a href="search-properties.html" class="title">@item.UserId</a>
+
+                                                                    <p class="text">@item.Description</p>
+                                                                </div>
+                                                                <div class="more-info-house">
+                                                                    <div class="price">$ @item.MoneyRange</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="our-service padding-top padding-bottom">
+                                <div class="container">
+                                    <div class="our-service-wrapper">
+                                        <div class="sunhouse-title">
+                                            <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-mail_box--></div>
+                                            <h2 class="main-title">our service</h2>
+
+                                            <p class="sub-title">Psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="our-service-content">
+                                                <div class="col-md-3">
+                                                    <div data-wow-delay="0.2s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
+                                                        <div class="icon-wrapper"><i class="icon-our-service icon-house_sell"></i></div>
+                                                        <p class="name">Sale Service</p>
+
+                                                        <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p><a href="service.html" class="btn-readmore">read more</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div data-wow-delay="0.45s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
+                                                        <div class="icon-wrapper"><i class="icon-our-service icon-rent"></i></div>
+                                                        <p class="name">Renting Service</p>
+
+                                                        <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p><a href="service.html" class="btn-readmore">read more</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div data-wow-delay="0.7s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
+                                                        <div class="icon-wrapper"><i class="icon-our-service icon-house_2"></i></div>
+                                                        <p class="name">Property Management</p>
+
+                                                        <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p><a href="service.html" class="btn-readmore">read more</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div data-wow-delay="0.95s" data-wow-duration="1s" class="our-service-items wow fadeInUp">
+                                                        <div class="icon-wrapper"><i class="icon-our-service icon-brush"></i></div>
+                                                        <p class="name">Free Market Analysis</p>
+
+                                                        <p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p><a href="service.html" class="btn-readmore">read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="our-agents padding-bottom padding-top">
+                                <div class="container">
+                                    <div class="our-agents-wrapper">
+                                        <div class="sunhouse-title">
+                                            <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-house_window--></div>
+                                            <h2 class="main-title">Our Agents</h2>
+
+                                            <p class="sub-title">One day however a small line of blind text by the name of Lorem Ipsum decided to</p>
+                                        </div>
+                                        <div class="our-agents-content">
+                                            <div class="our-agent-item">
+                                                <div class="item-wrapper">
+                                                    <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-3.png" alt="" class="img-responsive" /></div>
+                                                    <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
+                                                </div>
+                                                <div class="our-agent-info">
+                                                    <a href="agent-single.html" class="name">John Anderson</a>
+
+                                                    <p class="job">Director</p>
+                                                </div>
+                                            </div>
+                                            <div class="our-agent-item">
+                                                <div class="item-wrapper">
+                                                    <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-4.png" alt="" class="img-responsive" /></div>
+                                                    <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
+                                                </div>
+                                                <div class="our-agent-info">
+                                                    <a href="agent-single.html" class="name">Robert Lee</a>
+
+                                                    <p class="job">Expert Agent</p>
+                                                </div>
+                                            </div>
+                                            <div class="our-agent-item">
+                                                <div class="item-wrapper">
+                                                    <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-5.png" alt="" class="img-responsive" /></div>
+                                                    <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
+                                                </div>
+                                                <div class="our-agent-info">
+                                                    <a href="agent-single.html" class="name">Adam Smith</a>
+
+                                                    <p class="job">Expert Agent</p>
+                                                </div>
+                                            </div>
+                                            <div class="our-agent-item">
+                                                <div class="item-wrapper">
+                                                    <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-6.png" alt="" class="img-responsive" /></div>
+                                                    <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
+                                                </div>
+                                                <div class="our-agent-info">
+                                                    <a href="agent-single.html" class="name">Leonard Gonzalez</a>
+
+                                                    <p class="job">Expert Agent</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="our-clients-said padding-top padding-bottom">
+                                <div class="container">
+                                    <div class="our-clients-said-wrapper">
+                                        <div class="sunhouse-title">
+                                            <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-warehouse--></div>
+                                            <h2 class="main-title">our clients said</h2>
+
+                                            <p class="sub-title">One day however a small line of blind text by the name of Lorem Ipsum decided</p>
+                                        </div>
+                                        <div class="our-clients-said-content">
+                                            <div class="items">
+                                                <p class="saying">It is a long established fact that a reader will be distracted by the readable con tent of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+
+                                                <div class="info-client">
+                                                    <div class="avatar"><img src="assets/images/avatars/avatar-1.jpg" alt="" class="img-responsive" /></div>
+                                                    <div class="more-info">
+                                                        <p class="name">Howard K. Stern</p>
+
+                                                        <p class="job"> Director</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="items">
+                                                <p class="saying">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. The point of using Lorem Ipsum is that distribution of letters.</p>
+
+                                                <div class="info-client">
+                                                    <div class="avatar"><img src="assets/images/avatars/avatar-2.jpg" alt="" class="img-responsive" /></div>
+                                                    <div class="more-info">
+                                                        <p class="name">Thomas More</p>
+
+                                                        <p class="job"> Manager</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="contact-us">
+                                <div class="container">
+                                    <div data-parallax="{&quot;y&quot;:&quot;20%&quot;}" class="contact-us-scroll">
+                                        <div class="contact-us-wrapper">
+                                            <div class="contact-us-content">
+                                                <h2 class="title">contact</h2>
+
+                                                <p class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.</p>
+
+                                                <div class="info-list">
+                                                    <ul class="list-unstyled">
+                                                        <li class="info-line"><i class="info-icon fa fa-map-marker"></i><a href="#" class="info-text">1390 Somerset Drive, Raleigh, NC 27603</a></li>
+                                                        <li class="info-line"><i class="info-icon fa fa-phone"></i><a href="#" class="info-text">910-740-0626</a></li>
+                                                        <li class="info-line"><i class="info-icon fa fa-fax"></i><a href="#" class="info-text">910-740-0626</a></li>
+                                                        <li class="info-line"><i class="info-icon fa fa-envelope-o"></i><a href="#" class="info-text">domain@sunhouse.com</a></li>
+                                                        <li class="info-line"><i class="info-icon fa fa-skype"></i><a href="#" class="info-text">domain.sunhouse</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="new-letter-wrapper">
+                                            <div class="new-letter-content">
+                                                <h4 class="title">NEWSLETTER</h4>
+
+                                                <p class="text">Subcribe to receive new properties with good price.</p>
+
+                                                <form><input type="text" placeholder="Your Name" class="contact-form" /><input type="email" placeholder="Your Email" class="contact-form" /><textarea placeholder="Your Message" class="contact-form"></textarea><a href="#" class="btn btn-transparent white">send message</a></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vhp-title text-center"> <h1 class="h1">Trusted by families.<br> Loved by caregivers.</h1></div><br>
-            <div class="vhp-sub-title text-center"></div>
+            <!-- BUTTON BACK TO TOP-->
+            <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
         </div>
-        <div class="col-xs-6 col-md-6"></div>
-    </div>
-   
-</section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <!--.body-2.loading<div class="dots-loader"></div>--><!-- JAVASCRIPT LIBS-->
+        <script src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+        <script src="assets/libs/detect/browser.js"></script>
+        <script src="assets/libs/moment/js/moment.min.js"></script>
+        <script src="assets/libs/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+        <script src="assets/libs/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/libs/smooth-scroll/jquery-smoothscroll.js"></script>
+        <script src="assets/libs/owl-carousel-2.0/owl.carousel.min.js"></script>
+        <script src="assets/libs/fancybox/js/jquery.fancybox.js"></script>
+        <script src="assets/libs/fancybox/js/jquery.fancybox-buttons.js"></script>
+        <script src="assets/libs/appear/jquery.appear.js"></script>
+        <script src="assets/libs/count-to/jquery.countTo.js"></script>
+        <script src="assets/libs/wow-js/wow.min.js"></script>
+        <script src="assets/libs/selectbox/js/jquery.selectbox-0.2.min.js"></script>
+        <script src="assets/libs/select2/select2.min.js"></script>
+        <script src="assets/libs/range-slider/jquery.nstSlider.min.js"></script>
+        <script src="assets/libs/parallax/jquery.data-parallax.min.js"></script>
+        <script src="assets/libs/slick/slick.min.js"></script>
+        <!-- MAIN JS-->
+        <script src="assets/js/main.js"></script>
+        <!-- LOADING SCRIPTS FOR PAGE-->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>

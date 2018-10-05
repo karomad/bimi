@@ -24,9 +24,9 @@ namespace BIMI.Web.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-           
+
         }
-        DbSet<JobModel> Jobs { get; set; }
+        public DbSet<JobModel> Jobs { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

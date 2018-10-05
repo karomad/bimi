@@ -18,6 +18,8 @@ namespace BIMI.Web.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        public const string Parrent = "Parent";
+        public const string Worker = "Worker";
         public AccountController()
         {
         }
@@ -153,6 +155,10 @@ namespace BIMI.Web.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                var role = model.IsParent ? Parrent : Worker;
+
+                await UserManager.AddToRoleAsync(user.Id,role);
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

@@ -6,35 +6,146 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/careStyle.css" rel="stylesheet" />
+
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700,900">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome-4.4.0/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-svg/style.css">
+    <!-- Library css-->
+    <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/animate/animate.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/owl-carousel-2.0/assets/owl.carousel.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/selectbox/css/jquery.selectbox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/range-slider/jquery.nstSlider.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/datetimepicker/css/bootstrap-datetimepicker.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox-buttons.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/slick/slick.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/slick/slick-theme.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/select2/select2.min.css">
+    <!-- style css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/layout.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/components.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/responsive.css">
+
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <header>
+        <div class="bg-white">
+            <div class="header-topbar">
+                <div class="container">
+                    <ul class="topbar-left list-unstyled pull-left">
+                        <li>
+                            <a href="javascript:void(0)" class="language"><i class="topbar-icon fa fa-globe"></i><span>English</span><i class="topbar-icon icons-dropdown fa fa-angle-down"></i></a>
+                            <ul class="dropdown-language list-unstyled hide">
+                                <li><a href="#">Vietnam</a></li>
+                                <li><a href="#">Japan</a></li>
+                                <li><a href="#">Korea</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="hotline"><i class="topbar-icon fa fa-phone"></i><span>+84 909 015 345</span></a></li>
+                        <li><a href="#" class="email"><i class="topbar-icon fa fa-map-marker"></i><span>contactus@sunhouse.com</span></a></li>
+                    </ul>
+                    <div class="topbar-right pull-right">
+                        <div class="socials"><a href="#" class="link facebook"><i class="fa fa-facebook-square"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link pinterest"><i class="fa fa-pinterest"></i></a><a href="#" class="link blog"><i class="fa fa-rss"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a><a href="#" class="link dribbble"><i class="fa fa-dribbble"></i></a></div>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <div class="header-main header-style2">
+                <div class="container">
+                    <div class="header-main-wrapper">
+                        <div class="navbar-header">
+                            <div class="logo logo-black"><a href="index.html" class="header-logo"><img src="assets/images/logo-1.png" alt="" /></a></div>
+                            <div class="logo logo-white"><a href="index.html" class="header-logo"><img src="assets/images/logo-2.png" alt="" /></a></div>
+                            <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        </div>
+                        <nav class="navigation collapse navbar-collapse">
+                            <ul class="nav-links nav navbar-nav">
+                                <li class="dropdown active">
+                                    <a href="@Url.Action("Index")" class="main-menu">Home<span class="fa fa-angle-down icons-dropdown"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-1">
+                                        <li><a href="index.html" class="link-page">Home page default</a></li>
+                                        <li><a href="homepage-02.html" class="link-page">Homepage Header Centered Full Color</a></li>
+                                        <li><a href="homepage-03.html" class="link-page">Homepage Header Centered Transparent</a></li>
+                                        <li><a href="homepage-04.html" class="link-page">Homepage Topbar Transparent</a></li>
+                                        <li><a href="homepage-05.html" class="link-page">Homepage Full Color</a></li>
+                                        <li><a href="homepage-06.html" class="link-page">Homepage slider</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="main-menu">agents<span class="fa fa-angle-down icons-dropdown"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-1">
+                                        <li><a href="agent-list.html" class="link-page">agent list</a></li>
+                                        <li><a href="agent-single.html" class="link-page">agent single</a></li>
+                                        <li><a href="agencies-list.html" class="link-page">agencies list</a></li>
+                                        <li><a href="agency-detail.html" class="link-page">agency detail</a></li>
+                                        <li><a href="user-profile.html" class="link-page">user profile</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="main-menu">property<span class="fa fa-angle-down icons-dropdown"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-1">
+                                        <li><a href="properties.html" class="link-page">property list/grid</a></li>
+                                        <li><a href="properties-non-sidebar.html" class="link-page">property nonsidebar</a></li>
+                                        <li><a href="properties-masonry.html" class="link-page">property masonry</a></li>
+                                        <li><a href="property-detail.html" class="link-page">property detail</a></li>
+                                        <li><a href="search-properties.html" class="link-page">map filter</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="main-menu">page<span class="fa fa-angle-down icons-dropdown"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-1">
+                                        <li><a href="service.html" class="link-page">services</a></li>
+                                        <li><a href="gallery.html" class="link-page">gallery</a></li>
+                                        <li><a href="about-us.html" class="link-page">about us</a></li>
+                                        <li><a href="pricing.html" class="link-page">Pricing</a></li>
+                                        <li><a href="sign-up.html" class="link-page">sign in</a></li>
+                                        <li><a href="register.html" class="link-page">Register</a></li>
+                                        <li><a href="coming-soon.html" class="link-page">coming soon</a></li>
+                                        <li><a href="faq.html" class="link-page">FAQ</a></li>
+                                        <li><a href="404.html" class="link-page">page 404</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html" class="main-menu">contact</a></li>
+                                <li class="navbar-right" style="left:230px">
+
+                                    @Html.Partial("_LoginPartial")
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Be.Me.", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
