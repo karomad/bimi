@@ -496,15 +496,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\FontAwesome.otf" />
-    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.eot" />
-    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.ttf" />
-    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.woff" />
-    <Content Include="assets\font\font-icon\font-svg\selection.json" />
     <Content Include="assets\images\gallery\Thumbs.db" />
     <Content Include="assets\libs\bootstrap-3.3.6\css\bootstrap-theme.css.map" />
     <Content Include="assets\libs\bootstrap-3.3.6\css\bootstrap-theme.min.css.map" />
@@ -517,6 +508,15 @@
     <Content Include="assets\libs\slick\fonts\slick.eot" />
     <Content Include="assets\libs\slick\fonts\slick.ttf" />
     <Content Include="assets\libs\slick\fonts\slick.woff" />
+    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\font\font-icon\font-awesome-4.4.0\fonts\FontAwesome.otf" />
+    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.eot" />
+    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.ttf" />
+    <Content Include="assets\font\font-icon\font-svg\fonts\icomoon.woff" />
+    <Content Include="assets\font\font-icon\font-svg\selection.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\creative.js" />
     <Content Include="Scripts\creative.min.js" />
@@ -580,7 +580,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\GetParentJob.cshtml" />
     <Content Include="Views\Home\GetJobList.cshtml" />
-    <Content Include="Views\Home\GetWorkerJob.cshtml" />
+    <Content Include="Views\Home\GetJob.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,8 +19,8 @@
                                     </div>
                                     <div class="group-button">
 
-                                        <a href="@Url.Action("GetParentJob")" class="btn btn-blue">Find care</a>
-                                        <a href="@Url.Action("GetWorkertJob")" class="btn btn-blue">Find jobs</a>
+                                        <a href="@Url.Action("GetJob",new { isParent = true })" class="btn btn-blue">Find care</a>
+                                        <a href="@Url.Action("GetJob",new { isParent = false })" class="btn btn-blue">Find jobs</a>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                                         <div class="sunhouse-title">
                                             <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--    i.icon-church--></div>
                                             <h2 class="main-title">Newest Properties</h2>
-
+                                            <i class="icon-our-service icon-house_sell"></i>
                                             <p class="sub-title">Haven't you heard about the recession: Topten reasons why you should properties</p>
                                         </div>
 
@@ -58,7 +58,7 @@
                                                         </div>
                                                     </div>
                                                 }
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                 <div class="container">
                                     <div class="our-service-wrapper">
                                         <div class="sunhouse-title">
-                                            <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-mail_box--></div>
+                                            <div class="icon-image"><img src="~/assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-mail_box--></div>
                                             <h2 class="main-title">our service</h2>
 
                                             <p class="sub-title">Psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
@@ -259,6 +259,6 @@
             <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
         </div>
 
-      
+
     </div>
 </body>
