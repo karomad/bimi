@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201810051749370_asdasd.Designer.cs">
       <DependentUpon>201810051749370_asdasd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810051854424_adduserreation.cs" />
+    <Compile Include="Migrations\201810051854424_adduserreation.Designer.cs">
+      <DependentUpon>201810051854424_adduserreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -580,6 +584,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\GetParentJob.cshtml" />
     <Content Include="Views\Home\GetJobList.cshtml" />
+    <Content Include="Views\Home\GetWorkerJob.cshtml" />
+    <Content Include="Views\Home\ChooseService.cshtml" />
     <Content Include="Views\Home\GetJob.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -616,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810051749370_asdasd.resx">
       <DependentUpon>201810051749370_asdasd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810051854424_adduserreation.resx">
+      <DependentUpon>201810051854424_adduserreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

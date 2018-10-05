@@ -86,5 +86,15 @@ namespace BIMI.Web.Controllers
             return job;
         }
 
+        public ActionResult ChooseService()
+        {
+
+            return View();
+        }
+
+        public ActionResult Service(int? id)
+        {
+            return View();
+        }
     }
 }
