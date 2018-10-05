@@ -85,14 +85,18 @@ namespace BIMI.Web.Controllers
             return View(job);
         }
 
+        [HttpGet]
         public ActionResult ChooseService()
         {
 
             return View();
         }
 
-        public ActionResult Service(int? id)
+        [HttpPost]
+        public ActionResult Service(ChooseserviceModel obj)
         {
+            int a = (int)obj.ServiceType;
+            
             return View();
         }
     }

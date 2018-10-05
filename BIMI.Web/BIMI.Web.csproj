@@ -229,8 +229,13 @@
     <Compile Include="Migrations\201810051854424_adduserreation.Designer.cs">
       <DependentUpon>201810051854424_adduserreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810052039586_asas.cs" />
+    <Compile Include="Migrations\201810052039586_asas.Designer.cs">
+      <DependentUpon>201810052039586_asas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ChooseserviceModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MainPageViewModel.cs" />
     <Compile Include="Models\JobModel.cs" />
@@ -624,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810051854424_adduserreation.resx">
       <DependentUpon>201810051854424_adduserreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052039586_asas.resx">
+      <DependentUpon>201810052039586_asas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
