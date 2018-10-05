@@ -1,0 +1,10 @@
+﻿@using BIMI.Web.Enums 
+
+<form action="@Url.Action("Service", "Home")">
+@Html.DropDownList("ServiceType",
+                    new SelectList(Enum.GetValues(typeof(ServiceType))),
+                    "Select Service",
+                    new { @class = "form-control" })
+    <h1></h1>
+    <input type="submit" value="Enter">
+    </form>
