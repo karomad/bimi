@@ -245,6 +245,10 @@
     <Compile Include="Migrations\201810052215177_asdasdasdasdsssssssssssssssssssssss.Designer.cs">
       <DependentUpon>201810052215177_asdasdasdasdsssssssssssssssssssssss.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810052349401_asdasdasdasdssssssssssssssssssssssssssssssss.cs" />
+    <Compile Include="Migrations\201810052349401_asdasdasdasdssssssssssssssssssssssssssssssss.Designer.cs">
+      <DependentUpon>201810052349401_asdasdasdasdssssssssssssssssssssssssssssssss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ChooseserviceModel.cs" />
@@ -408,6 +412,18 @@
     <Content Include="assets\images\service-3.jpg" />
     <Content Include="assets\images\service-4.jpg" />
     <Content Include="assets\images\soon.png" />
+    <Content Include="assets\images\user-profile\1_WN675vy88i4dBvREKid__A.jpeg" />
+    <Content Include="assets\images\user-profile\600_arekrl-movsisyan-shmays.jpg" />
+    <Content Include="assets\images\user-profile\alaina.png" />
+    <Content Include="assets\images\user-profile\ElenaMainini-642927.jpg" />
+    <Content Include="assets\images\user-profile\FanWU.jpg" />
+    <Content Include="assets\images\user-profile\images11.jpg" />
+    <Content Include="assets\images\user-profile\imagessss.jpg" />
+    <Content Include="assets\images\user-profile\Joel-370x220.jpg" />
+    <Content Include="assets\images\user-profile\mda %281%29.jpg" />
+    <Content Include="assets\images\user-profile\mda.jpg" />
+    <Content Include="assets\images\user-profile\photo_2018-04-10_10-40-42-profile-370x220.jpg" />
+    <Content Include="assets\images\user-profile\shmais.jpg" />
     <Content Include="assets\images\user-profile\user-1.jpg" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\pages\blog-detail.js" />
@@ -505,11 +521,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="assets\images\babysitter-with-children.jpg" />
     <Content Include="Content\Images\calendar.svg" />
     <Content Include="Content\Images\img-mom-kid-background-template.jpg" />
     <Content Include="Content\Images\safety.svg" />
     <Content Include="Content\Images\transparency.svg" />
     <Content Include="favicon.ico" />
+    <Content Include="Files\UserImages\21496_orig.jpg" />
+    <Content Include="Files\UserImages\6163_orig.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -605,10 +624,10 @@
     <Content Include="Views\Home\GetWorkerJob.cshtml" />
     <Content Include="Views\Home\ChooseService.cshtml" />
     <Content Include="Views\Home\GetJob.cshtml" />
+    <Content Include="Views\Home\GetContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Files\UserImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -656,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810052215177_asdasdasdasdsssssssssssssssssssssss.resx">
       <DependentUpon>201810052215177_asdasdasdasdsssssssssssssssssssssss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052349401_asdasdasdasdssssssssssssssssssssssssssssssss.resx">
+      <DependentUpon>201810052349401_asdasdasdasdssssssssssssssssssssssssssssssss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

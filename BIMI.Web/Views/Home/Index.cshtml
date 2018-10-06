@@ -21,6 +21,12 @@
 
                                     <a href="@Url.Action("GetJob",new { isParent = true })" class="btn btn-blue">Find care</a>
                                     <a href="@Url.Action("GetJob",new { isParent = false })" class="btn btn-blue">Find jobs</a>
+
+                                </div>
+
+                                <div class="group-button">
+                                    <a href="@Url.Action("ChooseService",new {@IsParent = true })" class="btn btn-blue">Offer a Job</a>
+                                    <a href="@Url.Action("ChooseService",new {@IsParent = false })" class="btn btn-blue">Offer a Service </a>
                                 </div>
                             </div>
                         </div>
@@ -31,135 +37,163 @@
                             <div class="container">
                                 <div class="newest-properties-wrapper">
                                     <div class="sunhouse-title">
-                                        <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--    i.icon-church--></div>
-                                        <h2 class="main-title">Newest Properties</h2>
+                                        <h2 class="main-title">Newest Jobs</h2>
                                         <i class="icon-our-service icon-house_sell"></i>
-                                        <p class="sub-title">Haven't you heard about the recession: Topten reasons why you should properties</p>
                                     </div>
 
                                     <div class="row">
                                         <div class="newest-properties-content">
-                                            @foreach (var item in Model.Jobs)
-                                            {
-                                                <div class="col-md-4 col-xs-6">
-                                                    <div class="sunhouse-item">
-                                                        <a href="property-detail.html" class="wrapper-image"><img src="assets/images/houses/house-1.jpg" alt="" class="img-responsive layout-1" /><img src="assets/images/houses/house-9.jpg" alt="" class="img-responsive layout-2" /></a>
+                                            <div class="col-md-4 col-xs-6">
+                                                <div class="sunhouse-item">
+                                                    <a href="" class="wrapper-image"><img src="~/assets/images/user-profile/ElenaMainini-642927.jpg" alt="" class="img-responsive layout-1" /></a>
 
-                                                        <div class="wrapper-content">
-                                                            <div class="about-house">
-                                                                <a href="search-properties.html" class="title">@item.UserId</a>
+                                                    <div class="wrapper-content">
 
-                                                                <p class="text">@item.Description</p>
-                                                            </div>
-                                                            <div class="more-info-house">
-                                                                <div class="price">$ @item.MoneyRange</div>
-                                                            </div>
+                                                        <div class="about-house">
+                                                            <a href="" class="title">Andy Garcia</a>
+
+                                                            <p class="text">Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat</p>
+                                                        </div>
+                                                        <div class="more-info-house">
+                                                            <div class="place-house"><i class="fa fa-map-marker"></i><a href="#">568 E 1st Ave, Ney Jersey</a></div>
+                                                            <div class="price">$ 15/hour</div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            }
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="our-agents padding-bottom padding-top">
-                            <div class="container">
-                                <div class="our-agents-wrapper">
-                                    <div class="sunhouse-title">
-                                        <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-house_window--></div>
-                                        <h2 class="main-title">Our Agents</h2>
-
-                                        <p class="sub-title">One day however a small line of blind text by the name of Lorem Ipsum decided to</p>
-                                    </div>
-                                    <div class="our-agents-content">
-                                        <div class="our-agent-item">
-                                            <div class="item-wrapper">
-                                                <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-3.png" alt="" class="img-responsive" /></div>
-                                                <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
                                             </div>
-                                            <div class="our-agent-info">
-                                                <a href="agent-single.html" class="name">John Anderson</a>
+                                            <div class="col-md-4 col-xs-6">
+                                                <div class="sunhouse-item">
+                                                    <a href="" class="wrapper-image"><img src="~/assets/images/user-profile/photo_2018-04-10_10-40-42-profile-370x220.jpg" alt="" class="img-responsive layout-1" /></a>
 
-                                                <p class="job">Director</p>
-                                            </div>
-                                        </div>
-                                        <div class="our-agent-item">
-                                            <div class="item-wrapper">
-                                                <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-4.png" alt="" class="img-responsive" /></div>
-                                                <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
-                                            </div>
-                                            <div class="our-agent-info">
-                                                <a href="agent-single.html" class="name">Robert Lee</a>
+                                                    <div class="wrapper-content">
 
-                                                <p class="job">Expert Agent</p>
-                                            </div>
-                                        </div>
-                                        <div class="our-agent-item">
-                                            <div class="item-wrapper">
-                                                <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-5.png" alt="" class="img-responsive" /></div>
-                                                <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
-                                            </div>
-                                            <div class="our-agent-info">
-                                                <a href="agent-single.html" class="name">Adam Smith</a>
+                                                        <div class="about-house">
+                                                            <a href="" class="title">Fabio Moretti</a>
 
-                                                <p class="job">Expert Agent</p>
-                                            </div>
-                                        </div>
-                                        <div class="our-agent-item">
-                                            <div class="item-wrapper">
-                                                <div class="our-agent-avatar"><img src="assets/images/avatars/avatar-6.png" alt="" class="img-responsive" /></div>
-                                                <div class="our-agent-socials"><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a><a href="#" class="link google"><i class="fa fa-google-plus"></i></a><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></div>
-                                            </div>
-                                            <div class="our-agent-info">
-                                                <a href="agent-single.html" class="name">Leonard Gonzalez</a>
-
-                                                <p class="job">Expert Agent</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="our-clients-said padding-top padding-bottom">
-                            <div class="container">
-                                <div class="our-clients-said-wrapper">
-                                    <div class="sunhouse-title">
-                                        <div class="icon-image"><img src="assets/images/logo-title-1.png" alt="" class="img-responsive" /><!--.icon-title--><!--   i.icon-warehouse--></div>
-                                        <h2 class="main-title">our clients said</h2>
-
-                                        <p class="sub-title">One day however a small line of blind text by the name of Lorem Ipsum decided</p>
-                                    </div>
-                                    <div class="our-clients-said-content">
-                                        <div class="items">
-                                            <p class="saying">It is a long established fact that a reader will be distracted by the readable con tent of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-
-                                            <div class="info-client">
-                                                <div class="avatar"><img src="assets/images/avatars/avatar-1.jpg" alt="" class="img-responsive" /></div>
-                                                <div class="more-info">
-                                                    <p class="name">Howard K. Stern</p>
-
-                                                    <p class="job"> Director</p>
+                                                            <p class="text">Aute irure dolor in reprehenderit in voluptate velit es sint cillumor dolore eu fugiat</p>
+                                                        </div>
+                                                        <div class="more-info-house">
+                                                            <div class="place-house"><i class="fa fa-map-marker"></i><a href="search-properties.html">12 1st Ave, New fanco</a></div>
+                                                            <div class="price">$ 23/hour</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="items">
-                                            <p class="saying">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. The point of using Lorem Ipsum is that distribution of letters.</p>
+                                            <div class="col-md-4 col-xs-6">
+                                                <div class="sunhouse-item">
+                                                    <a href="" class="wrapper-image"><img src="~/assets/images/user-profile/alaina.png" alt="" class="img-responsive layout-1" /></a>
 
-                                            <div class="info-client">
-                                                <div class="avatar"><img src="assets/images/avatars/avatar-2.jpg" alt="" class="img-responsive" /></div>
-                                                <div class="more-info">
-                                                    <p class="name">Thomas More</p>
+                                                    <div class="wrapper-content">
 
-                                                    <p class="job"> Manager</p>
+                                                        <div class="about-house">
+                                                            <a href="" class="title">Flora Torres</a>
+
+                                                            <p class="text">Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat</p>
+                                                        </div>
+                                                        <div class="more-info-house">
+                                                            <div class="place-house"><i class="fa fa-map-marker"></i><a href="#">658 L 2nd Ave, Boston</a></div>
+                                                            <div class="price">$ 32/hour</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="our-agents padding-bottom padding-top">
+                        <div class="container">
+                            <div class="our-agents-wrapper">
+                                <div class="sunhouse-title">
+                                    <h2 class="main-title">Our Agents</h2>
+
+                                    <p class="sub-title">Finding your match is easy.</p>
+                                </div>
+                                <div class="our-agents-content">
+                                    <div class="our-agent-item">
+                                        <div class="item-wrapper" style="width:270px;height:330px">
+                                            <div class="our-agent-avatar"><img src="~/assets/images/user-profile/mda.jpg" alt="" class="img-responsive" /></div>
+                                        </div>
+                                        <div class="our-agent-info">
+                                            <a href="agent-single.html" class="name">John Anderson</a>
+
+                                            <p class="job">Tutor</p>
+                                        </div>
+                                    </div>
+                                    <div class="our-agent-item">
+                                        <div class="item-wrapper" style="width:270px;height:330px">
+                                            <div class="our-agent-avatar"><img src="~/assets/images/user-profile/FanWU.jpg" alt="" class="img-responsive" /></div>
+                                        </div>
+                                        <div class="our-agent-info">
+                                            <a href="agent-single.html" class="name">Robert Lee</a>
+
+                                            <p class="job">Driver</p>
+                                        </div>
+                                    </div>
+                                    <div class="our-agent-item">
+                                        <div class="item-wrapper">
+                                            <div class="our-agent-avatar"><img src="~/assets/images/user-profile/mda (1).jpg" style="width:270px;height:330px" alt="" class="img-responsive" /></div>
+                                        </div>
+                                        <div class="our-agent-info">
+                                            <a href="agent-single.html" class="name">Adam Smith</a>
+
+                                            <p class="job">Tutor</p>
+                                        </div>
+                                    </div>
+                                    <div class="our-agent-item">
+                                        <div class="item-wrapper" style="width:270px;height:330px">
+                                            <div class="our-agent-avatar"><img src="~/assets/images/user-profile/imagessss.jpg" alt="" class="img-responsive" /></div>
+                                        </div>
+                                        <div class="our-agent-info">
+                                            <a href="agent-single.html" class="name">Bella Gonzalez</a>
+
+                                            <p class="job">Bebesitter</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="our-clients-said padding-top padding-bottom">
+                        <div class="container">
+                            <div class="our-clients-said-wrapper">
+                                <div class="sunhouse-title">
+                                    <h2 class="main-title">our clients said</h2>
+
+                                    <p class="sub-title">One day however a small line of blind text by the name of Lorem Ipsum decided</p>
+                                </div>
+                                <div class="our-clients-said-content">
+                                    <div class="items">
+                                        <p class="saying">It is a long established fact that a reader will be distracted by the readable con tent of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+
+                                        <div class="info-client">
+                                            <div class="avatar"><img src="~/assets/images/user-profile/1_WN675vy88i4dBvREKid__A.jpeg" alt="" class="img-responsive" /></div>
+                                            <div class="more-info">
+                                                <p class="name">Howard K. Stern</p>
+
+                                                <p class="job"> Parrent</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="items">
+                                        <p class="saying">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. The point of using Lorem Ipsum is that distribution of letters.</p>
+
+                                        <div class="info-client">
+
+                                            <div class="avatar"><img src="~/assets/images/user-profile/shmais.jpg" alt="" class="img-responsive" /></div>
+                                            <div class="more-info">
+                                                <p class="name">Thomas More</p>
+
+                                                <p class="job"> Driver</p>
                                             </div>
                                         </div>
                                     </div>
@@ -167,36 +201,38 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="section">
-                        <div class="contact-us">
-                            <div class="container">
-                                <div data-parallax="{&quot;y&quot;:&quot;20%&quot;}" class="contact-us-scroll">
-                                    <div class="contact-us-wrapper">
-                                        <div class="contact-us-content">
-                                            <h2 class="title">contact</h2>
+                <div class="section">
+                    <div class="contact-us">
+                        <div class="container">
+                            <div data-parallax="{&quot;y&quot;:&quot;20%&quot;}" class="contact-us-scroll">
+                                <div class="contact-us-wrapper">
+                                    <div class="contact-us-content">
+                                        <h2 class="title">contact</h2>
 
-                                            <p class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.</p>
-
-                                            <div class="info-list">
-                                                <ul class="list-unstyled">
-                                                    <li class="info-line"><i class="info-icon fa fa-map-marker"></i><a href="#" class="info-text">1390 Somerset Drive, Raleigh, NC 27603</a></li>
-                                                    <li class="info-line"><i class="info-icon fa fa-phone"></i><a href="#" class="info-text">910-740-0626</a></li>
-                                                    <li class="info-line"><i class="info-icon fa fa-fax"></i><a href="#" class="info-text">910-740-0626</a></li>
-                                                    <li class="info-line"><i class="info-icon fa fa-envelope-o"></i><a href="#" class="info-text">domain@sunhouse.com</a></li>
-                                                    <li class="info-line"><i class="info-icon fa fa-skype"></i><a href="#" class="info-text">domain.sunhouse</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="info-list">
+                                            <ul class="list-unstyled">
+                                                <li class="info-line"><i class="info-icon fa fa-map-marker"></i><a href="#" class="info-text">1390 Somerset Drive, Raleigh, NC 27603</a></li>
+                                                <li class="info-line"><i class="info-icon fa fa-phone"></i><a href="#" class="info-text">374-20-20-21</a></li>
+                                                <li class="info-line"><i class="info-icon fa fa-fax"></i><a href="#" class="info-text">374-77-20-20-20</a></li>
+                                                <li class="info-line"><i class="info-icon fa fa-envelope-o"></i><a href="#" class="info-text">beme@mail.com</a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="new-letter-wrapper">
-                                        <div class="new-letter-content">
-                                            <h4 class="title">NEWSLETTER</h4>
+                                </div>
+                                <div class="new-letter-wrapper">
+                                    <div class="new-letter-content">
+                                        <h4 class="title">NEWSLETTER</h4>
 
-                                            <p class="text">Subcribe to receive new properties with good price.</p>
+                                        <p class="text">Subcribe to receive new properties with good price.</p>
 
-                                            <form><input type="text" placeholder="Your Name" class="contact-form" /><input type="email" placeholder="Your Email" class="contact-form" /><textarea placeholder="Your Message" class="contact-form"></textarea><a href="#" class="btn btn-transparent white">send message</a></form>
-                                        </div>
+                                        <form>
+                                            <input type="text" placeholder="Your Name" class="contact-form" />
+                                            <input type="email" placeholder="Your Email" class="contact-form" />
+                                            <textarea placeholder="Your Message" class="contact-form"></textarea>
+                                            <a href="#" class="btn btn-transparent white">send message</a>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -205,9 +241,10 @@
                 </div>
             </div>
         </div>
-        <!-- BUTTON BACK TO TOP-->
-        <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
     </div>
+    <!-- BUTTON BACK TO TOP-->
+    <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
+</div>
 
 
 </div>

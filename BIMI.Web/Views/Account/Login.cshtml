@@ -4,59 +4,65 @@
     ViewBag.Title = "Log in";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+<section id="loginForm">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div id="wrapper-content">
+            <!-- PAGE WRAPPER-->
+            <div id="page-wrapper">
+                <!-- MAIN CONTENT-->
+                <div class="main-content">
+                    <!-- CONTENT-->
+                    <div class="content">
+                        <div class="page-sign-up signup-register">
+                            <div class="container">
+                                <div class="page-sign-up-wrapper signup-register-wrapper">
+                                    <div class="page-sign-up-table signup-register-table">
+                                    @Html.AntiForgeryToken()
+
+                                        <div class="title">
+                                            sign in to your account!
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+
+                                                <div class="col-md-12">
+                                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+
+
+                                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div class="col-md-12">
+                                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+
+                                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                                <button type="submit" class="btn btn-blue btn-signup">sign in </button>
+                                        </div>
+
+
+                                        <p class="title-sign-in">Don't have an account yet?<a href="@Url.Action("Register","Account")" class="link signin">create now!</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
+            </div>
+            <!-- BUTTON BACK TO TOP-->
+            <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
+        </div>
+    }
+</section>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

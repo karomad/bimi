@@ -968,9 +968,9 @@ textarea.contact-form {
     background-image: url(../images/libs/banner-3.jpg)
 }
 
-.banner-06 .banner-3 .bg-image {
-    background-image: url(../images/libs/property-view-2.jpg)
-}
+    .banner-06 .banner-3 .bg-image {
+        background-image: url('../images/babysitter-with-children.jpg');
+    }
 
 .banner-06 .slick-dots {
     bottom: 30px
@@ -2750,9 +2750,9 @@ textarea.contact-form {
     background-color: rgba(52, 73, 94, 0.5)
 }
 
-.page-title.property-view {
-    background-image: url("../images/libs/property-view-2.jpg")
-}
+    .page-title.property-view {
+       background-image: url('../images/babysitter-with-children.jpg');
+    }
 
 .page-title.property-view.bg-overlay:before {
     background-color: rgba(52, 73, 94, 0.3)

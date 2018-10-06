@@ -154,11 +154,11 @@ namespace BIMI.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var file = Request.Files[0];
-                var filename = "~/Files/UserImages/" + file.FileName;
-                file.SaveAs(Server.MapPath(filename));
+                //var file = Request.Files[0];
+                //var filename = "~/Files/UserImages/" + file.FileName;
+                //file.SaveAs(Server.MapPath(filename));
 
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Image = filename };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName,Image = "" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 var role = model.IsParent ? Parrent : Worker;
 

@@ -43,62 +43,39 @@
                         <li>
                             <a href="javascript:void(0)" class="language"><i class="topbar-icon fa fa-globe"></i><span>English</span><i class="topbar-icon icons-dropdown fa fa-angle-down"></i></a>
                             <ul class="dropdown-language list-unstyled hide">
-                                <li><a href="#">Vietnam</a></li>
-                                <li><a href="#">Japan</a></li>
-                                <li><a href="#">Korea</a></li>
+                                <li><a href="#">Russian</a></li>
+                                <li><a href="#">Armenian</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="hotline"><i class="topbar-icon fa fa-phone"></i><span>+84 909 015 345</span></a></li>
-                        <li><a href="#" class="email"><i class="topbar-icon fa fa-map-marker"></i><span>contactus@sunhouse.com</span></a></li>
+                        <li><a href="#" class="hotline"><i class="topbar-icon fa fa-phone"></i><span>+374 77 77 77 77 </span></a></li>
+                        <li><a href="#" class="email"><i class="topbar-icon fa fa-map-marker"></i><span>contactus@beme.com</span></a></li>
                     </ul>
-                   
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                            </div>
+                        }
+                    }
+
+
+
                 </div>
             </div>
             <div class="header-main header-style2">
                 <div class="container">
                     <div class="header-main-wrapper">
                         <div class="navbar-header">
-                            <div class="logo logo-black"><a href="index.html" class="header-logo"><img src="~/assets/images/43131634_584940935273850_2505987639098736640_n.png" /></a></div>
-                            <div class="logo logo-white"><a href="index.html" class="header-logo"><img src="~/assets/images/logo-2.png" alt="" /></a></div>
+                            <div class="logo logo-black"><a href="@Url.Action("Index","Home")" class="header-logo"><img src="~/assets/images/43131634_584940935273850_2505987639098736640_n.png" /></a></div>
                             <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                         </div>
-                        <nav class="navigation collapse navbar-collapse">
-                            <ul class="nav-links nav navbar-nav">
-                                <li class="dropdown active">
-                                    <a href="@Url.Action("Index")" class="main-menu">Home<span class="fa fa-angle-down icons-dropdown"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-1">
-                                        <li><a href="@Url.Action("Index")" class="link-page">Home page default</a></li>
 
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="javascript:void(0)" class="main-menu">agents<span class="fa fa-angle-down icons-dropdown"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-1">
-                                        <li><a href="agent-list.html" class="link-page">agent list</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="javascript:void(0)" class="main-menu">page<span class="fa fa-angle-down icons-dropdown"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-1">
-                                        <li><a href="service.html" class="link-page">services</a></li>
-                                        <li><a href="gallery.html" class="link-page">gallery</a></li>
-                                        <li><a href="about-us.html" class="link-page">about us</a></li>
-                                        <li><a href="pricing.html" class="link-page">Pricing</a></li>
-                                        <li><a href="sign-up.html" class="link-page">sign in</a></li>
-                                        <li><a href="register.html" class="link-page">Register</a></li>
-                                        <li><a href="coming-soon.html" class="link-page">coming soon</a></li>
-                                        <li><a href="faq.html" class="link-page">FAQ</a></li>
-                                        <li><a href="404.html" class="link-page">page 404</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html" class="main-menu">contact</a></li>
-                                <li class="navbar-right" style="left:230px">
-
-                                    @Html.Partial("_LoginPartial")
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

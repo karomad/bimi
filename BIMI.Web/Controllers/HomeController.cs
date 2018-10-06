@@ -77,7 +77,7 @@ namespace BIMI.Web.Controllers
             return View();
         }
 
-        public ActionResult GetJobList(bool isParent,int type)
+        public ActionResult GetJobList(bool isParent, int type)
         {
             List<JobModel> job = (from f in db.Jobs
                                   where f.isParent == isParent && f.Type == type
@@ -87,17 +87,19 @@ namespace BIMI.Web.Controllers
                 var user = UserManager.FindById(item.UserId);
                 item.FirstName = user.FirstName;
                 item.LastName = user.LastName;
-                item.Image = user.Image;
+                item.Image = string.IsNullOrEmpty(user.Image) ? "" : user.Image.Replace("~/Files/UserImages/", "");
             }
+
+            ViewBag.IsParent = isParent;
 
             return View(job);
         }
 
         [HttpGet]
         [Authorize]
-        public ActionResult ChooseService()
+        public ActionResult ChooseService(bool isParent)
         {
-
+            ViewBag.IsParent = isParent;
             return View();
         }
 
@@ -118,5 +120,6 @@ namespace BIMI.Web.Controllers
             db.SaveChanges();
             return View("Index");
         }
+
     }
 }
